@@ -1,23 +1,23 @@
 # Makefile for VocabLib
 
-CXXFLAGS = -O2 $(DEBUGFLAGS) -fmessage-length=0 -std=c++11 -fpic -I./include/
-LDFLAGS = -L../lib/ -lboost_iostreams
+CXXFLAGS = -O2 $(GLOBAL_CXXFLAGS) $(DEBUGFLAGS) -fmessage-length=0 -std=c++11 -fpic -I./include/
+LDFLAGS = $(GLOBAL_LDFLAGS) -L../lib/ -lboost_iostreams
 
 # Common
 CXXFLAGS += -I../Common/include/
 LDFLAGS += -lcommon
 
 # OpenCV Extensions
-CXXFLAGS += -I../OpenCVExtensions/include
-LDFLAGS += -lopencv_extensions
+#CXXFLAGS += -I../OpenCVExtensions/include
+#LDFLAGS += -lopencv_extensions
 
 # DBrief
-CXXFLAGS += -I../../dbrief_lib
-LDFLAGS += -L../../dbrief_lib/lib -ldbrief
+#CXXFLAGS += -I../../dbrief_lib
+#LDFLAGS += -L../../dbrief_lib/lib -ldbrief
 
 # Agast
-CXXFLAGS += -I../../agast_lib
-LDFLAGS += -L../../agast_lib/lib -lagast
+#CXXFLAGS += -I../../agast_lib
+#LDFLAGS += -L../../agast_lib/lib -lagast
 
 # KMajority
 CXXFLAGS += -I../KMajorityLib/include

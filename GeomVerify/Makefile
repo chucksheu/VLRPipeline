@@ -1,7 +1,7 @@
 # Makefile for Test
 
-CXXFLAGS = -O2 $(DEBUGFLAGS) -fmessage-length=0 -std=c++0x -I./
-LDFLAGS = -L../lib/
+CXXFLAGS = -O2 $(GLOBAL_CXXFLAGS) $(DEBUGFLAGS) -fmessage-length=0 -std=c++0x -I./
+LDFLAGS = $(GLOBAL_LDFLAGS) -L../lib/
 
 # Common
 CXXFLAGS += -I../Common/include/

@@ -4,20 +4,20 @@ CXXFLAGS = -O2 $(DEBUGFLAGS) -fmessage-length=0 -std=c++0x
 LDFLAGS = -L../lib/
 
 # OpenCV Extensions
-CXXFLAGS += -I../OpenCVExtensions/include
-LDFLAGS += -lopencv_extensions
+#CXXFLAGS += -I../OpenCVExtensions/include
+#LDFLAGS += -lopencv_extensions
 
 # Common
 CXXFLAGS += -I../Common/include/
 LDFLAGS += -lcommon
 
 # DBrief
-CXXFLAGS += -I../../dbrief_lib
-LDFLAGS += -L../../dbrief_lib/lib -ldbrief
+#CXXFLAGS += -I../../dbrief_lib
+#LDFLAGS += -L../../dbrief_lib/lib -ldbrief
 
 # Agast
-CXXFLAGS += -I../../agast_lib
-LDFLAGS += -L../../agast_lib/lib -lagast
+#CXXFLAGS += -I../../agast_lib
+#LDFLAGS += -L../../agast_lib/lib -lagast
 
 # OpenCV (this goes last: beware of the linking order)
 CXXFLAGS += `pkg-config opencv --cflags`

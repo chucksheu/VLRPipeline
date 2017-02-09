@@ -1,13 +1,18 @@
 # Top-level Makefile
 
-DEBUGFLAGS = -g -Wall
-#export DEBUGFLAGS
+DEBUGFLAGS = -g -Wall 
+export DEBUGFLAGS
+GLOBAL_CXXFLAGS = -I/usr/local/Cellar/libmemcached/1.0.18_1/include -I/usr/local/Cellar/boost/1.63.0/include
+GLOBAL_LDFLAGS = -L/usr/local/Cellar/libmemcached/1.0.18_1/lib -L/usr/local/Cellar/boost/1.63.0/lib
+
+export GLOBAL_CXXFLAGS
+export GLOBAL_LDFLAGS
 
 all: libs programs
 
 libs:
 # Make libraries
-	cd OpenCVExtensions; $(MAKE)
+#	cd OpenCVExtensions; $(MAKE)
 	cd Common; $(MAKE)
 	cd KMajorityLib; $(MAKE)
 	cd IncrementalKMeansLib; $(MAKE)

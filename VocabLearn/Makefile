@@ -1,7 +1,7 @@
 # Makefile for VocabLearn
 
-CXXFLAGS = -O2 $(DEBUGFLAGS) -fmessage-length=0 -std=c++0x
-LDFLAGS = -L../lib/ -lboost_iostreams
+CXXFLAGS = -O2 $(GLOBAL_CXXFLAGS) $(DEBUGFLAGS) -fmessage-length=0 -std=c++0x
+LDFLAGS = $(GLOBAL_LDFLAGS) -L../lib/ -lboost_iostreams
 
 # Common
 CXXFLAGS += -I../Common/include/

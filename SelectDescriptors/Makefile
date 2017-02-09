@@ -1,7 +1,7 @@
 # Makefile for SelectDescriptors
 
-CXXFLAGS = -O2 $(DEBUGFLAGS) -fmessage-length=0 -std=c++0x
-LDFLAGS = -L../lib/
+CXXFLAGS = -O2 $(GLOBAL_CXXFLAGS) $(DEBUGFLAGS) -fmessage-length=0 -std=c++0x
+LDFLAGS = $(GLOBAL_LDFLAGS) -L../lib/
 
 # Common
 CXXFLAGS += -I../Common/include/

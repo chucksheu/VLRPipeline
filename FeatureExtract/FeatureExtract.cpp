@@ -15,7 +15,8 @@
 #include <FileUtils.hpp>
 
 #include <opencv2/core/internal.hpp>
-#include <opencv2/extensions/features2d.hpp>
+//#include <opencv2/extensions/features2d.hpp>
+#include <opencv2/features2d/features2d.hpp>
 #include <opencv2/flann/logger.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/legacy/legacy.hpp>
@@ -79,7 +80,7 @@ int main(int argc, char **argv) {
 	}
 
 	// Initialize 2d features extensions mode, necessary for using AGAST and DBRIEF
-	cv::initModule_features2d_extensions();
+	//cv::initModule_features2d_extensions();
 
 	// Initialize non-free module, necessary for using SIFT and SURF
 	cv::initModule_nonfree();
